@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation.xml"
+    app:startDestination="@id/mainFragment">
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.icebergs.a20230207_kasutubhmemane_nycschools.ui.main.ui.school.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_satScoreFragment2"
+            app:destination="@id/satScoreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/satScoreFragment"
+        android:name="com.icebergs.a20230207_kasutubhmemane_nycschools.ui.main.ui.sat.SatScoreFragment"
+        android:label="SatScoreFragment" >
+        <argument
+            android:name="SatScore"
+            app:argType="com.icebergs.a20230207_kasutubhmemane_nycschools.ui.main.database.model.SATScoreDto" />
+    </fragment>
+</navigation>
